@@ -137,7 +137,7 @@
      "type": "string"
     },
     "relativeTimeRange": {
-     "$ref": "#/definitions/RelativeTimeRange"
+     "$ref": "#/definitions/RelativeTimeRangeExport"
     }
    },
    "title": "AlertQueryExport is the provisioned export of models.AlertQuery.",
@@ -2978,6 +2978,19 @@
    },
    "type": "object"
   },
+  "RelativeTimeRangeExport": {
+   "properties": {
+    "from": {
+     "format": "int64",
+     "type": "integer"
+    },
+    "to": {
+     "format": "int64",
+     "type": "integer"
+    }
+   },
+   "type": "object"
+  },
   "ResponseDetails": {
    "properties": {
     "msg": {
@@ -4257,6 +4270,7 @@
    "type": "object"
   },
   "gettableAlerts": {
+   "description": "GettableAlerts gettable alerts",
    "items": {
     "$ref": "#/definitions/gettableAlert"
    },
@@ -4318,6 +4332,7 @@
    "type": "array"
   },
   "integration": {
+   "description": "Integration integration",
    "properties": {
     "lastNotifyAttempt": {
      "description": "A timestamp indicating the last attempt to deliver a notification regardless of the outcome.\nFormat: date-time",
@@ -4499,7 +4514,6 @@
    "type": "object"
   },
   "receiver": {
-   "description": "Receiver receiver",
    "properties": {
     "active": {
      "description": "active",
