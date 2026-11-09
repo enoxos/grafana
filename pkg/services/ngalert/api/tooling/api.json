@@ -137,7 +137,7 @@
      "type": "string"
     },
     "relativeTimeRange": {
-     "$ref": "#/definitions/RelativeTimeRange"
+     "$ref": "#/definitions/RelativeTimeRangeExport"
     }
    },
    "title": "AlertQueryExport is the provisioned export of models.AlertQuery.",
@@ -2978,6 +2978,19 @@
    },
    "type": "object"
   },
+  "RelativeTimeRangeExport": {
+   "properties": {
+    "from": {
+     "format": "int64",
+     "type": "integer"
+    },
+    "to": {
+     "format": "int64",
+     "type": "integer"
+    }
+   },
+   "type": "object"
+  },
   "ResponseDetails": {
    "properties": {
     "msg": {
@@ -4096,6 +4109,7 @@
    "type": "object"
   },
   "alertGroups": {
+   "description": "AlertGroups alert groups",
    "items": {
     "$ref": "#/definitions/alertGroup"
    },
@@ -4461,7 +4475,6 @@
    "type": "array"
   },
   "postableSilence": {
-   "description": "PostableSilence postable silence",
    "properties": {
     "comment": {
      "description": "comment",
